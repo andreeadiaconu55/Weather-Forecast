@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/global.css">
+</head>
+
+<body> 
+    <body>
+        <div class="box">
+            <center><h1>Find out the weather in your city</h1></center>
+                <div class="search">
+                    <input type="text" id="autocomplete" placeholder="Enter city" spellcheck="false">
+                    <div id="suggestions">
+                        <ul id="results"></ul>
+                    </div>
+            </div>
+            <center><button id="searchButton"><img src="data:image/png;base64,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" alt="search button" width="40 px" height="30 px"></button>
+            <button id="heartButton" onclick="addCity()"><img src="https://clipart-library.com/2023/29-299531_little-heart-clipart-transparent-small-heart-clipart-hd.png" alt="heart button" width="40 px" height="30 px"></button>
+            <div id="loading-spinner" class="hidden"></div>
+        </center>
+
+            <ul id="cityList"></ul>
+
+            <div class="weather-icon">
+                <img src="https://cdn.iconscout.com/icon/free/png-256/free-sun-behind-cloud-1671391-1422398.png?f=webp" alt="" class="weather-icon">
+                <h2 class="temp">- °C</h2>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="forecast">
+                <center><h2>5 day forecast</h2></center>
+                <ul class="weather-cards">
+                    <li class="day-card">
+                        <h6>Temperature: </h6>
+                        <h6>Humidity: </h6>
+                        <h6>Wind speed: </h6>
+                    </li>
+                    <li class="day-card">
+                        <h6>Temperature: </h6>
+                        <h6>Humidity: </h6>
+                        <h6>Wind speed: </h6>
+                    </li>
+                    <li class="day-card">
+                        <h6>Temperature: </h6>
+                        <h6>Humidity: </h6>
+                        <h6>Wind speed: </h6>
+                    </li>
+                    <li class="day-card">
+                        <h6>Temperature: </h6>
+                        <h6>Humidity: </h6>
+                        <h6>Wind speed: </h6>
+                    </li>
+                    <li class="day-card">
+                        <h6>Temperature: </h6>
+                        <h6>Humidity: </h6>
+                        <h6>Wind speed: </h6>
+                    </li>
+                </ul></center>
+                <div class="shape-container"></div>
+            </div>
+        </div>
+        <script src="scripts/index.js"></script>
+    </body>
+</html>
